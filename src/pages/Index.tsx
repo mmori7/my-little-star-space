@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import { Button } from "@/components/ui/button";
-import herPhoto from "@/assets/her-photo.png";
+import lahPhoto from "@/assets/lah-photo.png";
 
 const Index = () => {
   const [showQuestion, setShowQuestion] = useState(false);
@@ -26,8 +26,8 @@ const Index = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-50 group-hover:opacity-100" />
               <img
-                src={herPhoto}
-                alt="You"
+                src={lahPhoto}
+                alt="Lah"
                 className="relative w-64 h-64 rounded-full object-cover border-4 border-primary/50 shadow-2xl group-hover:scale-105 group-hover:border-primary transition-all duration-500 group-hover:shadow-[0_0_50px_rgba(244,114,182,0.6)]"
               />
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/0 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -36,7 +36,7 @@ const Index = () => {
             {/* Initial message */}
             <div className="space-y-4 animate-fade-in-up">
               <p className="text-2xl md:text-3xl font-light text-foreground/90 leading-relaxed">
-                I made this little space just for you…
+                Hey Lah, I made this little space just for you…
               </p>
               <p className="text-xl md:text-2xl font-light text-foreground/80 leading-relaxed">
                 Because since we met, you're all I think about 💫
@@ -75,11 +75,11 @@ const Index = () => {
             {/* Audio player */}
             <div className="mt-8 w-full max-w-md">
               <div className="bg-card/30 backdrop-blur-sm rounded-2xl p-4 border border-primary/20">
-                <p className="text-sm text-foreground/70 mb-3 text-center">A song for you 🎵</p>
+                <p className="text-sm text-foreground/70 mb-3 text-center">A song for you, Lah 🎵</p>
                 <iframe
                   className="w-full rounded-lg"
                   height="80"
-                  src="https://www.youtube.com/embed/2Vv-BfVoq4g?controls=1&modestbranding=1"
+                  src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=0&controls=1&modestbranding=1&loop=1&playlist=2Vv-BfVoq4g"
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -94,7 +94,7 @@ const Index = () => {
               🎉
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-primary animate-glow">
-              You made me the happiest! 💕
+              You made me the happiest, Lah! 💕
             </h1>
             <p className="text-2xl md:text-3xl text-foreground/90">
               I can't wait to create more memories with you ✨
