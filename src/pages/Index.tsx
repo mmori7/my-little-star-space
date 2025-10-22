@@ -1,10 +1,9 @@
 import { useState } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import { Button } from "@/components/ui/button";
-import lahPhoto from "@/assets/lah-photo.png";
+import herPhoto from "@/assets/her-photo.png";
 
 const Index = () => {
-  const [showQuestion, setShowQuestion] = useState(false);
   const [celebrate, setCelebrate] = useState(false);
 
   const handleYes = () => {
@@ -19,14 +18,11 @@ const Index = () => {
       <div className="relative z-10 max-w-2xl w-full">
         {!celebrate ? (
           <div className="flex flex-col items-center space-y-8 text-center">
-            {/* Photo with hover effects */}
-            <div 
-              className="relative group cursor-pointer"
-              onMouseEnter={() => setShowQuestion(true)}
-            >
+            {/* Photo */}
+            <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500 opacity-50 group-hover:opacity-100" />
               <img
-                src={lahPhoto}
+                src={herPhoto}
                 alt="Lah"
                 className="relative w-64 h-64 rounded-full object-cover border-4 border-primary/50 shadow-2xl group-hover:scale-105 group-hover:border-primary transition-all duration-500 group-hover:shadow-[0_0_50px_rgba(244,114,182,0.6)]"
               />
@@ -43,14 +39,8 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Question appears on hover */}
-            <div 
-              className={`space-y-6 transition-all duration-700 ${
-                showQuestion 
-                  ? "opacity-100 translate-y-0" 
-                  : "opacity-0 translate-y-10 pointer-events-none"
-              }`}
-            >
+            {/* Question */}
+            <div className="space-y-6 animate-fade-in-up">
               <h1 className="text-4xl md:text-5xl font-bold text-primary animate-glow">
                 Will you be my girlfriend?
               </h1>
@@ -69,23 +59,6 @@ const Index = () => {
                 >
                   No
                 </Button>
-              </div>
-            </div>
-
-            {/* Audio player */}
-            <div className="mt-8 w-full max-w-3xl">
-              <div className="bg-black/40 backdrop-blur-md rounded-3xl p-6 border border-primary/30 shadow-[0_0_50px_rgba(244,114,182,0.2)]">
-                <p className="text-lg text-foreground/90 mb-4 text-center font-light">A song for you, Lah 🎵</p>
-                <div className="bg-black rounded-2xl overflow-hidden">
-                  <iframe
-                    className="w-full"
-                    height="200"
-                    src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=0&controls=1&modestbranding=1&loop=1&playlist=2Vv-BfVoq4g"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
               </div>
             </div>
           </div>
@@ -108,6 +81,18 @@ const Index = () => {
             </div>
           </div>
         )}
+      </div>
+
+      {/* Background music - YouTube video hidden */}
+      <div className="fixed bottom-0 left-0 w-0 h-0 overflow-hidden opacity-0 pointer-events-none">
+        <iframe
+          width="1"
+          height="1"
+          src="https://www.youtube.com/embed/BgXwoLgMPU8?autoplay=1&mute=0&controls=0&loop=1&playlist=BgXwoLgMPU8"
+          title="Background music"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
       </div>
     </div>
   );
