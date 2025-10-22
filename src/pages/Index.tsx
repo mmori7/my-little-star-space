@@ -73,17 +73,19 @@ const Index = () => {
             </div>
 
             {/* Audio player */}
-            <div className="mt-8 w-full max-w-md">
-              <div className="bg-card/30 backdrop-blur-sm rounded-2xl p-4 border border-primary/20">
-                <p className="text-sm text-foreground/70 mb-3 text-center">A song for you, Lah 🎵</p>
-                <iframe
-                  className="w-full rounded-lg"
-                  height="80"
-                  src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=0&controls=1&modestbranding=1&loop=1&playlist=2Vv-BfVoq4g"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
+            <div className="mt-8 w-full max-w-3xl">
+              <div className="bg-black/40 backdrop-blur-md rounded-3xl p-6 border border-primary/30 shadow-[0_0_50px_rgba(244,114,182,0.2)]">
+                <p className="text-lg text-foreground/90 mb-4 text-center font-light">A song for you, Lah 🎵</p>
+                <div className="bg-black rounded-2xl overflow-hidden">
+                  <iframe
+                    className="w-full"
+                    height="200"
+                    src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=0&controls=1&modestbranding=1&loop=1&playlist=2Vv-BfVoq4g"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </div>
           </div>
